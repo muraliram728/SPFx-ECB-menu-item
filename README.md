@@ -1,73 +1,47 @@
-# spfxcommandset
+# SPFx Custom Action with ECB Menu
 
-## Summary
-
-Short summary on functionality and used technologies.
-
-[picture of the solution in action, if possible]
-
-## Used SharePoint Framework Version
-
-![version](https://img.shields.io/badge/version-1.20.0-green.svg)
-
-## Applies to
-
-- [SharePoint Framework](https://aka.ms/spfx)
-- [Microsoft 365 tenant](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant)
-
-> Get your own free development tenant by subscribing to [Microsoft 365 developer program](http://aka.ms/o365devprogram)
-
-## Prerequisites
-
-> Any special pre-requisites?
-
-## Solution
-
-| Solution    | Author(s)                                               |
-| ----------- | ------------------------------------------------------- |
-| folder name | Author details (name, company, twitter alias with link) |
-
-## Version history
-
-| Version | Date             | Comments        |
-| ------- | ---------------- | --------------- |
-| 1.1     | March 10, 2021   | Update comment  |
-| 1.0     | January 29, 2021 | Initial release |
-
-## Disclaimer
-
-**THIS CODE IS PROVIDED _AS IS_ WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.**
-
----
-
-## Minimal Path to Awesome
-
-- Clone this repository
-- Ensure that you are at the solution folder
-- in the command-line run:
-  - **npm install**
-  - **gulp serve**
-
-> Include any additional steps as needed.
+This project demonstrates how to create a SharePoint Framework (SPFx) extension that adds a custom ECB (Edit Control Block) menu item. When the user clicks the custom menu item, a form is displayed, allowing the user to input text and select an option from a choice column. The form's data is then submitted and stored in a SharePoint list.
 
 ## Features
 
-Description of the extension that expands upon high-level summary above.
+- **Custom ECB Menu Action**: Adds a new item to the SharePoint list ECB menu.
+- **Form with Input Field**: A textbox that allows users to type content, which is then stored in a SharePoint list.
+- **Choice Field**: A dropdown with options (`Option 1`, `Option 2`, and `Option 3`) that users can select and submit.
+- **Integration with SharePoint List**: The form data (text input and selected choice) is saved directly to a specified SharePoint list.
+- **Dialog-Based Form**: A React-based dialog is rendered when the ECB menu action is clicked.
 
-This extension illustrates the following concepts:
+## Technology Stack
 
-- topic 1
-- topic 2
-- topic 3
+- **SharePoint Framework (SPFx)**: Used for creating the custom extension.
+- **React**: The form is built using React components.
+- **PnP JS**: Handles communication with SharePoint lists for item creation.
+- **Fluent UI**: Utilized for building the form controls (textbox, dropdown).
+  
+## Installation
 
-> Notice that better pictures and documentation will increase the sample usage and the value you are providing for others. Thanks for your submissions advance.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/SPFx-Portfolio.git
+   cd SPFx-Portfolio
 
-> Share your web part with others through Microsoft 365 Patterns and Practices program to get visibility and exposure. More details on the community, open-source projects and other activities from http://aka.ms/m365pnp.
+2.npm install
+3.gulp build
+4.gulp bundle --ship
+5.gulp package-solution --ship
+6.Deploy the solution package to your SharePoint tenant's App Catalog.
 
-## References
+How It Works...
 
-- [Getting started with SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant)
-- [Building for Microsoft teams](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/build-for-teams-overview)
-- [Use Microsoft Graph in your solution](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-microsoft-graph-apis)
-- [Publish SharePoint Framework applications to the Marketplace](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/publish-to-marketplace-overview)
-- [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp) - Guidance, tooling, samples and open-source controls for your Microsoft 365 development
+1. Custom ECB Menu Action: Once the solution is deployed, a custom menu action appears in the list view context menu (ECB menu).
+
+2.Form Interaction: Clicking on the custom action opens a dialog containing:
+          1.A textbox for text input.
+          2.A dropdown with three options.
+          
+3.Data Submission: When the form is submitted, the text and selected option are stored in a SharePoint list.
+Screenshot
+
+Screenshot
+![img1](https://github.com/user-attachments/assets/6cab8c7e-9189-44ca-ac16-8f0e8cbf4660)
+![img2](https://github.com/user-attachments/assets/0ddc5fba-bc34-4cba-bb5f-f12ef15ccdbf)
+![img3](https://github.com/user-attachments/assets/a6b42961-4227-46eb-a45c-d1c939749f12)
