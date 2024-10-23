@@ -25,10 +25,15 @@ This project demonstrates how to create a SharePoint Framework (SPFx) extension 
    cd SPFx-Portfolio
 
 2.npm install
+
 3.gulp build
+
 4.gulp bundle --ship
+
 5.gulp package-solution --ship
+
 6.Deploy the solution package to your SharePoint tenant's App Catalog.
+
 
 How It Works...
 
